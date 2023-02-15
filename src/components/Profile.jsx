@@ -1,10 +1,10 @@
 import React from "react";
+import Avatar from "./Avatar";
 
-export default function Profile({ image, name, title, isNew }) {
+export default function Profile({ name, title, isNew, image }) {
   return (
     <div className="profile">
-      {isNew && <div className="newCrew">NEW</div>}
-      <img className="photo" src={image}></img>
+      <Avatar isNew={isNew} image={image} />
       <h1>{name}</h1>
       <p>{title}</p>
     </div>
