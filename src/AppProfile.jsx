@@ -8,7 +8,7 @@ function AppProfile() {
         image="https://images.unsplash.com/photo-1676411726635-38b22f46616d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
         name="new Crew"
         title="front-end Developer"
-        newCrew={<div className="newCrew">New</div>}
+        isNew={true}
       />
 
       <Profile
