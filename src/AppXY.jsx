@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import "./AppXY.css";
 
 export default function AppXY() {
-  const [pointer, setPointer] = useState((0, 0));
+  const [pointerX, setPointerX] = useState(0);
+  const [pointerY, setPointerY] = useState(0);
   const mouseMove = (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-    console.log(mouseX, mouseY);
-    setPointer(mouseX, mouseY);
+    setPointerX(e.clientX);
+    setPointerY(e.clientY);
   };
   return (
     <div className="container" onMouseMove={mouseMove}>
-      <div className="pointer"></div>
+      <div
+        className="pointer"
+        style={{ transform: `translate(${pointerX}px, ${pointerY}px)` }}
+      ></div>
     </div>
   );
 }
